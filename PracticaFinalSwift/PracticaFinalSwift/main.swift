@@ -24,52 +24,9 @@ func mainMenu() {
     if let choice = readLine() {
         switch choice {
         case "1":
-            // Solicitar email y contraseña
-            print("Ingrese su email:")
-            guard let emailInput = readLine(), !emailInput.isEmpty else {
-                print(UserError.emptyInput.localizedDescription)
-                return
-            }
-            
-            //Validar que exista email
-            guard users.contains(where: {$0.email == emailInput}) else {
-                print(UserError.emailNotFound.localizedDescription)
-                return
-            }
-            
-            // Validar email
-            if let error = UserError.validateEmail(emailInput) {
-//                print(error.localizedDescription)
-                print("Error: \(error)")
-                return
-            }
-            
-            print("Ingrese su contraseña:")
-            guard let passwordInput = readLine(), !passwordInput.isEmpty else {
-                print(UserError.emptyInput.localizedDescription)
-                return
-            }
-            
-            //Verificar que la contraseña sea la correcta para el email ingresado
-            guard users.contains(where: {$0.checkPassword(passwordInput)}) else {
-                print(UserError.passwordDoesNotMatchEmail.localizedDescription)
-                return
-            }
-            
-            
-            // Validar contraseña
-            if let error = UserError.validatePassword(passwordInput) {
-                print(error.localizedDescription)
-                return
-            }
-            
-            // Llamar a la función Login para checar email y password
-            LoginController.login(emailInput: emailInput, passwordInput: passwordInput, users: users, onSuccess: {role in
-                print("Login exitoso como \(role)")
-            }, onFailure: {error in
-                print("Error: \(error.localizedDescription)")
-            })
-            
+            UserLoginHandler.handleUserLogin(users: users)
+        case "2":
+            UserLoginHandler.handleUserLogin(users: users)
         default:
             print("Opción inválida. Intente nuevamente.")
         }
