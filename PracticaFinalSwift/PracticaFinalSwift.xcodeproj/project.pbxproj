@@ -19,7 +19,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		33703E4F2D5970F3004B983A /* PracticaFinalSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = PracticaFinalSwift; path = "/Users/luisquintero/Desktop/KeepCoding/Practica Final Swift/PracticaFinalSwift/build/Debug/PracticaFinalSwift"; sourceTree = "<absolute>"; };
+		33703E6E2D59813B004B983A /* PracticaFinalSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PracticaFinalSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +69,7 @@
 				33703E5A2D597AD9004B983A /* Utils */,
 				33703E512D5970F3004B983A /* PracticaFinalSwift */,
 				33703E5F2D597C73004B983A /* Tests */,
+				33703E6E2D59813B004B983A /* PracticaFinalSwift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +99,7 @@
 			packageProductDependencies = (
 			);
 			productName = PracticaFinalSwift;
-			productReference = 33703E4F2D5970F3004B983A /* PracticaFinalSwift */;
+			productReference = 33703E6E2D59813B004B983A /* PracticaFinalSwift */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
