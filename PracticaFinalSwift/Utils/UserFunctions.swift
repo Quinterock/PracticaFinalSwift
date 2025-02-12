@@ -11,7 +11,7 @@ import Foundation
 class UserLoginHandler {
     
     // Función para manejar el login de un usuario
-    static func handleUserLogin(users: [User]) {
+    static func handleUserLogin(users: [User], requiredRole: UserRole) {
         print("Ingrese su email:")
         
         // Validar que el email no esté vacío
@@ -20,11 +20,26 @@ class UserLoginHandler {
             return
         }
         
-        // Verificar si el email existe en la lista de usuarios
+        // Verificar si el email existe
         guard users.contains(where: { $0.email == emailInput }) else {
             print(UserError.emailNotFound.localizedDescription) // Error si el email no está registrado
             return
         }
+        
+        // Verificar si el email existe en la lista de usuarios
+        guard let user = users.first(where: { $0.email == emailInput }) else {
+            print(UserError.emailNotFound.localizedDescription)
+            return
+            }
+        
+        
+        // Verificar si el rol coincide con el requerido
+        if user.role != requiredRole {
+                    let errorMessage = requiredRole == .normal ? "Debe ingresar con un usuario normal" : "Debe ingresar con un administrador"
+                    print(errorMessage)
+                    return
+                }
+        
         
         // Validar formato del email ingresado
         if let error = UserError.validateEmail(emailInput) {

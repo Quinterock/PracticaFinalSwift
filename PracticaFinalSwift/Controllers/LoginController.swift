@@ -21,6 +21,7 @@ class LoginController {
             onFailure(UserError.emailNotFound)
             return
         }
+        
 
         // Validar contraseña
         if let passwordError = UserError.validatePassword(passwordInput) {
