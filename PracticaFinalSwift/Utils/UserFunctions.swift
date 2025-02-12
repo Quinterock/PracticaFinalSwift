@@ -68,10 +68,18 @@ class UserLoginHandler {
         }
         
         // MARK: - Llamada al controlador de Login
-        LoginController.login(emailInput: emailInput, passwordInput: passwordInput, users: users, onSuccess: { role in
-            print("Login exitoso como \(role)") // Muestra el rol si el login es exitoso
+        LoginController.login(emailInput: emailInput, passwordInput: passwordInput, users: users, onSuccess: { role, username in
+            print()
+            print("Login exitoso como \(role), Buen día \(username)") // Muestra el rol y username
+            
+            // Si es el login es exitoso ejecuta el menú del usuario correspondiente
+            if role == UserRole.admin.rawValue {
+                AdminMenu.showMenu()
+            } else {
+                UserMenu.showMenu()
+            }
         }, onFailure: { error in
-            print("Error: \(error.localizedDescription)") // Muestra el error si el login falla
+            print("Error: \(error.localizedDescription)")
         })
     }
 }
