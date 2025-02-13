@@ -22,9 +22,7 @@ class AdminMenu {
         
         while shouldExit{
             
-            print()
             print("-------------------------")
-            print()
             print("Menú admin - Selecciona una opción:")
             print("1. Ver todos los usuarios")
             print("2. Añadir usuario")

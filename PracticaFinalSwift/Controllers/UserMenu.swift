@@ -13,12 +13,27 @@ import Foundation
 //3. Log out
 class UserMenu {
     static func showMenu() {
-        print()
-        print("-------------------------")
-        print()
-        print("Menú usuario - Selecciona una opción:")
-        print("1. Ver todas las rutas")
-        print("2. Obtener la ruta más corta entre dos puntos")
-        print("3. Log out")
+        var isActiveMenu = true
+        while isActiveMenu {
+            print("-------------------------")
+            print("Menú usuario - Selecciona una opción:")
+            print("1. Ver todas las rutas")
+            print("2. Obtener la ruta más corta entre dos puntos")
+            print("3. Log out")
+            
+            if let choice = readLine() {
+                switch choice {
+                case "1":
+                    NormalUserController.showAllRoutes()
+                case "2":
+                    NormalUserController.showShortestRouteNotImplementedYet()
+                case "3":
+                    NormalUserController.logOut()
+                    isActiveMenu = false
+            default:
+                print("Opción no válida")
+                }
+            }
+        }
     }
 }
