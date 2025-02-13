@@ -16,7 +16,7 @@ var users: [User] = [
 
 // MARK: - Menú principal
 func mainMenu() {
-    print("Bienvenido. Seleccione una opción:")
+    print("Bienvenido a SnowTrials")
     print("1. Acceder como Usuario Normal")
     print("2. Acceder como Administrador")
     print("3. Salir")

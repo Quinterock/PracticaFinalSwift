@@ -16,8 +16,9 @@ import Foundation
 //5. Logout
 
 class AdminMenu {
+    // MARK: Función de muestreo de Menú de Administrador
     static func showMenu() {
-        //Se repite hasta que se ponga 5
+        //Variable para mantener en ejecución
         var shouldExit = true
         
         while shouldExit{
@@ -44,7 +45,7 @@ class AdminMenu {
                     AdminController.logout()
                     shouldExit = false
                     default:
-                    print("Default")
+                    print("Opción no válida")
                 }
             }
         }

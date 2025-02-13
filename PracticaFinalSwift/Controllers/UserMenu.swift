@@ -6,13 +6,10 @@
 //
 
 import Foundation
-//El menú del usuario normal debe mostrar tres únicas opciones:
-//Menú usuario - Selecciona una opción:
-//1. Ver todas las rutas
-//2. Obtener la ruta más corta entre dos puntos
-//3. Log out
+// MARK: Función de muestreo de Menú de Usuario Normal
 class UserMenu {
     static func showMenu() {
+        //Variable para mantener en ejecución
         var isActiveMenu = true
         while isActiveMenu {
             print("-------------------------")

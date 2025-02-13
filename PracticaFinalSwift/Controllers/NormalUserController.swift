@@ -21,7 +21,6 @@ class NormalUserController {
     }
     
     // MARK: -3 Log out
-    
     static func logOut() {
         print("Cerrando sesión, Hasta luego!")
         print()

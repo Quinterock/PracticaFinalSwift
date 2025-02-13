@@ -72,24 +72,27 @@ class AdminController {
         }
     }
     
-    // MARK: -3 Eliminar usuarios
+    // MARK: -3 Eliminar usuarios2
     static func deleteUser(users: inout [User]) {
         print("Introduce el nombre del usuario que quieres eliminar:")
-        
-        // Solicitar el nombre del usuario a eliminar y verificar que no esté vacío
+        //Solicitar el nombre del usuario y verificar que no esté vacio
         guard let userToDelete = readLine(), !userToDelete.isEmpty else {
-            print(UserError.emptyInput.localizedDescription) // Mensaje de error si no se ingresa un nombre
+            print(UserError.emptyInput.localizedDescription)
             return
         }
         
-        // Buscar y eliminar al usuario con el nombre ingresado
-        if let index = users.firstIndex(where: {$0.username == userToDelete}) {
-            let deleteUser = users.remove(at: index) // Eliminar el usuario de la lista
-            print("Usuario \(deleteUser.username) ha sido eliminado") // Mensaje confirmando la eliminación
+        let initialCount = users.count //Guardamos la cantidad de usuarios que hay
+        users.removeAll { $0.username == userToDelete }//Elimina a todos los usuarios que cumplan con una condición
+        
+        //Verifica si se elimina al menos un usuario, y da el mensaje correspondiente
+        let deletedCount = initialCount - users.count
+        if deletedCount > 0 {
+            print("Se eliminaron \(deletedCount) usuario(s) con el nombre \(userToDelete)")
         } else {
-            print("Usuario \(userToDelete) no encontrado") // Mensaje si el usuario no está en la lista
+            print("Usuario \(userToDelete) no encontrado")
         }
     }
+
     // MARK: -4 Añadir punto a una ruta
     static func addRouteNotImplementedYet() {
         print("Esta característica no está implementada todavía, disculpe las molestias")
