@@ -6,14 +6,12 @@
 //
 
 import Foundation
-
-import Foundation
 class MenuController {
     // MARK: - Cargar usuarios predeterminados
     // Por defecto, deben existir un usuario regular y otro administrador cargados en el programa desde el inicio:
     var users: [User] = [
-        try! User(username: "Adminuserkeepcoding1", email: "a@k.es", password: "Adminuser1", role: .admin), // Usuario administrador
-        try! User(username: "Regularuserkeepcoding", email: "r@k.es", password: "Regularuser1", role: .normal) // Usuario regular
+        try! User(username: "Adminuserkeepcoding1", email: "adminuser@keepcoding.es", password: "Adminuser1", role: .admin), // Usuario administrador
+        try! User(username: "Regularuserkeepcoding", email: "regularuser@keepcoding.es", password: "Regularuser1", role: .normal) // Usuario regular
     ]
 
     // MARK: - Menú principal

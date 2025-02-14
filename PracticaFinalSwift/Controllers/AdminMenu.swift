@@ -23,7 +23,6 @@ class AdminMenu {
         var shouldExit = true
         
         while shouldExit{
-            
             print("-------------------------")
             print("Menú admin - Selecciona una opción:")
             print("1. Ver todos los usuarios")
