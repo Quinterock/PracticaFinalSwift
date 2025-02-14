@@ -18,6 +18,7 @@ import Foundation
 class AdminMenu {
     // MARK: Función de muestreo de Menú de Administrador
     static func showMenu() {
+        let main = MenuController()
         //Variable para mantener en ejecución
         var shouldExit = true
         
@@ -34,11 +35,11 @@ class AdminMenu {
             if let choice = readLine(){
                 switch choice {
                     case "1":
-                    AdminController.showAllUsers(users: users)
+                    AdminController.showAllUsers(users: main.users)
                     case "2":
-                    AdminController.addUser(users: &users)
+                    AdminController.addUser(users: &main.users)
                     case "3":
-                    AdminController.deleteUser(users: &users)
+                    AdminController.deleteUser(users: &main.users)
                     case "4":
                     AdminController.addRouteNotImplementedYet()
                     case "5":

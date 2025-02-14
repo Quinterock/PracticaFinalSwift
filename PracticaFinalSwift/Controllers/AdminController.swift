@@ -102,7 +102,7 @@ class AdminController {
     static func logout() {
         print("Cerrando sesión, Hasta luego!")
         print()
-        mainMenu()
+        MenuController().mainMenu()
     }
 }
 

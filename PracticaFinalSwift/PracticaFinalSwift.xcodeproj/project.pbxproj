@@ -19,38 +19,96 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		334CFDB82D5EBFD500DDCE3E /* PracticaFinalSwiftTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaFinalSwiftTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33703E6E2D59813B004B983A /* PracticaFinalSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PracticaFinalSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		334CFDC02D5EC06000DDCE3E /* Exceptions for "PracticaFinalSwift" folder in "PracticaFinalSwiftTesting" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				main.swift,
+			);
+			target = 334CFDB72D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */;
+		};
+		334CFDC22D5EC0A500DDCE3E /* Exceptions for "Models" folder in "PracticaFinalSwiftTesting" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Route.swift,
+				User.swift,
+			);
+			target = 334CFDB72D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */;
+		};
+		334CFDC52D5EC0AE00DDCE3E /* Exceptions for "Controllers" folder in "PracticaFinalSwiftTesting" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AdminController.swift,
+				AdminMenu.swift,
+				LoginController.swift,
+				MenuController.swift,
+				NormalUserController.swift,
+				UserMenu.swift,
+			);
+			target = 334CFDB72D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */;
+		};
+		334CFDCA2D5EC13100DDCE3E /* Exceptions for "Utils" folder in "PracticaFinalSwiftTesting" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				RouteFuncions.swift,
+				UserFunctions.swift,
+			);
+			target = 334CFDB72D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		334CFDB92D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PracticaFinalSwiftTesting;
+			sourceTree = "<group>";
+		};
 		33703E512D5970F3004B983A /* PracticaFinalSwift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				334CFDC02D5EC06000DDCE3E /* Exceptions for "PracticaFinalSwift" folder in "PracticaFinalSwiftTesting" target */,
+			);
 			path = PracticaFinalSwift;
 			sourceTree = "<group>";
 		};
 		33703E5A2D597AD9004B983A /* Utils */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				334CFDCA2D5EC13100DDCE3E /* Exceptions for "Utils" folder in "PracticaFinalSwiftTesting" target */,
+			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
 		33703E5B2D597AEA004B983A /* Controllers */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				334CFDC52D5EC0AE00DDCE3E /* Exceptions for "Controllers" folder in "PracticaFinalSwiftTesting" target */,
+			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		33703E5F2D597C73004B983A /* Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		33703E602D597C80004B983A /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				334CFDC22D5EC0A500DDCE3E /* Exceptions for "Models" folder in "PracticaFinalSwiftTesting" target */,
+			);
 			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		334CFDB52D5EBFD500DDCE3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33703E4C2D5970F3004B983A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,14 +126,37 @@
 				33703E5B2D597AEA004B983A /* Controllers */,
 				33703E5A2D597AD9004B983A /* Utils */,
 				33703E512D5970F3004B983A /* PracticaFinalSwift */,
-				33703E5F2D597C73004B983A /* Tests */,
 				33703E6E2D59813B004B983A /* PracticaFinalSwift */,
+				334CFDB82D5EBFD500DDCE3E /* PracticaFinalSwiftTesting.xctest */,
+				334CFDB92D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		334CFDB72D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 334CFDBC2D5EBFD500DDCE3E /* Build configuration list for PBXNativeTarget "PracticaFinalSwiftTesting" */;
+			buildPhases = (
+				334CFDB42D5EBFD500DDCE3E /* Sources */,
+				334CFDB52D5EBFD500DDCE3E /* Frameworks */,
+				334CFDB62D5EBFD500DDCE3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				334CFDB92D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */,
+			);
+			name = PracticaFinalSwiftTesting;
+			packageProductDependencies = (
+			);
+			productName = PracticaFinalSwiftTesting;
+			productReference = 334CFDB82D5EBFD500DDCE3E /* PracticaFinalSwiftTesting.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		33703E4E2D5970F3004B983A /* PracticaFinalSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33703E562D5970F3004B983A /* Build configuration list for PBXNativeTarget "PracticaFinalSwift" */;
@@ -92,7 +173,6 @@
 				33703E512D5970F3004B983A /* PracticaFinalSwift */,
 				33703E5A2D597AD9004B983A /* Utils */,
 				33703E5B2D597AEA004B983A /* Controllers */,
-				33703E5F2D597C73004B983A /* Tests */,
 				33703E602D597C80004B983A /* Models */,
 			);
 			name = PracticaFinalSwift;
@@ -112,6 +192,9 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					334CFDB72D5EBFD500DDCE3E = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					33703E4E2D5970F3004B983A = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -132,11 +215,29 @@
 			projectRoot = "";
 			targets = (
 				33703E4E2D5970F3004B983A /* PracticaFinalSwift */,
+				334CFDB72D5EBFD500DDCE3E /* PracticaFinalSwiftTesting */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		334CFDB62D5EBFD500DDCE3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		334CFDB42D5EBFD500DDCE3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33703E4B2D5970F3004B983A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +248,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		334CFDBD2D5EBFD500DDCE3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = luisquintero.PracticaFinalSwiftTesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		334CFDBE2D5EBFD500DDCE3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = luisquintero.PracticaFinalSwiftTesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		33703E542D5970F3004B983A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,6 +415,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		334CFDBC2D5EBFD500DDCE3E /* Build configuration list for PBXNativeTarget "PracticaFinalSwiftTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				334CFDBD2D5EBFD500DDCE3E /* Debug */,
+				334CFDBE2D5EBFD500DDCE3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		33703E4A2D5970F3004B983A /* Build configuration list for PBXProject "PracticaFinalSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

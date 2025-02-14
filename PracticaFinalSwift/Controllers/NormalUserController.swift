@@ -24,6 +24,6 @@ class NormalUserController {
     static func logOut() {
         print("Cerrando sesión, Hasta luego!")
         print()
-        mainMenu()
+        MenuController().mainMenu()
     }
 }
