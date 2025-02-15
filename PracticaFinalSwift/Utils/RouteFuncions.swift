@@ -5,7 +5,7 @@
 //  Created by Luis Quintero on 09/02/25.
 //
 import Foundation
-
+// MARK: Fórmulas de las rutas
 struct RouteFunctions {
     static func calculateDistance(lat1: Double, long1: Double, alt1: Double,
                                   lat2: Double, long2: Double, alt2: Double) -> Double {
@@ -23,7 +23,7 @@ struct RouteFunctions {
             sin(lat1_rad) * sin(lat2_rad) * cos(lon1_rad - lon2_rad)
         )
         
-        // Calcular la diferencia de altitud en km
+        // Calcular la difrencia de altitud en km
         let altDifference = (alt2 - alt1) / 1000.0
         
         // Aplicar Pitágoras para obtener la distancia 3D

@@ -6,6 +6,10 @@
 //
 
 import Foundation
+import os
+
+let menuControllerLogger = Logger(subsystem: "com.luisquintero.app", category: "controller_menu")
+// MARK: Menú Inicial
 class MenuController {
     // MARK: - Cargar usuarios predeterminados
     // Por defecto, deben existir un usuario regular y otro administrador cargados en el programa desde el inicio:
@@ -16,26 +20,36 @@ class MenuController {
 
     // MARK: - Menú principal
     func mainMenu() {
-        print("Bienvenido a SnowTrials")
-        print("1. Acceder como Usuario Normal")
-        print("2. Acceder como Administrador")
-        print("3. Salir")
+        var shouldExit = true
         
-    // Leer la opción seleccionada por el usuario
-        if let choice = readLine() {
+        while shouldExit {
+            print("Bienvenido a SnowTrials")
+            print("1. Acceder como Usuario Normal")
+            print("2. Acceder como Administrador")
+            print("3. Salir")
             
-            switch choice {
-            case "1":
-                // Llamar al handler de login para el usuario normal
-                UserLoginHandler.handleUserLogin(users: users, requiredRole: .normal)
-            case "2":
-                // Llamar al handler de login para el administrador
-                UserLoginHandler.handleUserLogin(users: users, requiredRole: .admin)
-            case "3":
-                print("Gracias por usar el programa. ¡Adiós!")
-            default:
-                print("Opción inválida. Intente nuevamente.")
+        // Leer la opción seleccionada por el usuario
+            if let choice = readLine() {
+                
+                switch choice {
+                case "1":
+                    menuControllerLogger.info("Login de usuario normal")
+                    // Llamar al handler de login para el usuario normal
+                    UserLoginHandler.handleUserLogin(users: users, requiredRole: .normal)
+                case "2":
+                    menuControllerLogger.info("Login de administrador")
+                    // Llamar al handler de login para el administrador
+                    UserLoginHandler.handleUserLogin(users: users, requiredRole: .admin)
+                case "3":
+                    menuControllerLogger.info("Cerrando programa")
+                    print("Gracias por usar el programa. ¡Adiós!")
+                    shouldExit = false
+                default:
+                    print("Opción inválida. Intente nuevamente.")
+                }
             }
         }
+        
+        
     }
 }

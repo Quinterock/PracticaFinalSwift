@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os
 
 //El menú de administrador debe mostrar las siguientes opciones:
 //Menú admin - Selecciona una opción:
@@ -15,6 +16,8 @@ import Foundation
 //4. Añadir punto a una ruta
 //5. Logout
 
+let adminLogger = Logger(subsystem: "com.luisquintero.app", category: "admin_menu")
+// MARK: Menú de usuario administrador
 class AdminMenu {
     // MARK: Función de muestreo de Menú de Administrador
     static func showMenu() {
@@ -34,14 +37,19 @@ class AdminMenu {
             if let choice = readLine(){
                 switch choice {
                     case "1":
+                    adminLogger.info("Mostrar todos los usuarios")
                     AdminController.showAllUsers(users: main.users)
                     case "2":
+                    adminLogger.info("Añadir usuario")
                     AdminController.addUser(users: &main.users)
                     case "3":
+                    adminLogger.info("Eliminar usuario")
                     AdminController.deleteUser(users: &main.users)
                     case "4":
+                    adminLogger.info("No implementado")
                     AdminController.addRouteNotImplementedYet()
                     case "5":
+                    adminLogger.info("Saliendo de admin")
                     AdminController.logout()
                     shouldExit = false
                     default:

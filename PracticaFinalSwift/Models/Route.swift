@@ -6,9 +6,11 @@
 //
 import Foundation
 
+// MARK: Definición de valores de puntos y obteción de distancia de las rutas
 struct Route {
     typealias Point = (lat: Double, long: Double, alt: Double) // Se agrega altitud
     
+    //Rutas y sus puntos
     static let rutas: [String: [Point]] = [
         "Ruta del Pico Nevado y Lago Helado": [
             (46, 7.5, 1500), (46.1, 7.6, 1600), (46.2, 7.7, 1700)

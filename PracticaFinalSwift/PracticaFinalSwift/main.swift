@@ -6,6 +6,7 @@
 //
 
 class App {
+    //MenuController es el menú principal
     let menuController = MenuController()
     func run() {
         menuController.mainMenu()
@@ -13,7 +14,7 @@ class App {
     
 }
 
-
-App().run()
+let app = App()
+app.run()
 
 

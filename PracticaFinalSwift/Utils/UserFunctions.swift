@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import os
+
+let userFunctionsLogger = Logger(subsystem: "com.luisquintero.app", category: "user_functions")
 
 // MARK: - Clase para manejar el login de usuario y sólo llamar esta función en main
 class UserLoginHandler {
@@ -74,8 +77,10 @@ class UserLoginHandler {
             
             // Si es el login es exitoso ejecuta el menú del usuario correspondiente
             if role == UserRole.admin.rawValue {
+                userFunctionsLogger.info("mostrar menu si es admin o usuario normal")
                 AdminMenu.showMenu()
             } else {
+                userFunctionsLogger.info("mostrar menu si es admin o usuario normal")
                 UserMenu.showMenu()
             }
         }, onFailure: { error in
